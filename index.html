@@ -55,23 +55,48 @@
          font-weight: 500;
          font-family: 'Inter', sans-serif !important;
       }
+
+      .chat-floating {
+         position: fixed;
+         right: 20px;
+         bottom: 57px;
+         z-index: 9999;
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
+         align-items: flex-end;
+      }
+
+      .chat-btn {
+         width: 56px;
+         height: 56px;
+         border-radius: 50%;
+         display: inline-flex;
+         align-items: center;
+         justify-content: center;
+         box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+         cursor: pointer;
+         background: white;
+         border: none;
+      }
+
+      .chat-label {
+         margin-right: 8px;
+         background: #fff;
+         padding: 6px 10px;
+         border-radius: 16px;
+         box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+         font-size: 14px;
+      }
+
+      /* Tùy chỉnh icon */
+      .zalo-icon {
+         background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="%2300ADEF"/><text x="50%" y="60%" font-size="12" text-anchor="middle" fill="white" font-family="Arial">Z</text></svg>') no-repeat center/60%;
+      }
    </style>
 </head>
 
 <body>
-   <!-- pre loader area start -->
-   <div id="loading">
-      <div id="loading-center">
-         <div id="loading-center-absolute">
-            <div class="loading-icon text-center d-sm-flex align-items-center">
-               <img class="loading-logo mr-10" src="assets/img/preloader/preloader-icon.png" alt="">
-               <img src="assets/img/preloader/preloader-logo.png" alt="">
-            </div>
-         </div>
-      </div>
-   </div>
-   <!-- pre loader area end -->
-
    <!-- header  -->
    <header>
       <div id="header-sticky" class="header-area header-transparent header-pad header-border">
@@ -129,11 +154,11 @@
             </button>
          </div>
          <div class="sidebar__content">
-            <div class="logo mb-40">
+            <!-- <div class="logo mb-40">
                <a href="#">
                   <img src="assets/img/logo/logo-dark.png" alt="logo">
                </a>
-            </div>
+            </div> -->
             <div class="mobile-menu fix"></div>
 
             <div class="sidebar__search p-relative mt-40 mb-20 ">
@@ -183,7 +208,7 @@
          <div class="slider-active swiper-container">
             <div class="swiper-wrapper">
                <div class="slider-list swiper-slide d-flex align-items-center pt-70">
-                  <div class="slider-bg img-zoom" data-background="assets/img/slider/slider3.jpg"></div>
+                  <div class="slider-bg img-zoom" data-background="assets/img/slider/slider1.jpg"></div>
                   <div class="container">
                      <div class="row">
                         <div class="col-12 position-relative">
@@ -283,7 +308,7 @@
                <div class="col-xl-6 col-lg-6">
                   <div class="ab-wrapper pos-rel">
                      <div class="ab-since">
-                        <h4>Kinh nghiệm<br>since 2015</h4>
+                        <h4>Kinh nghiệm<br>since 2018</h4>
                      </div>
                      <div class="row gx-2 mb-30">
                         <div class="col-6">
@@ -335,8 +360,8 @@
       <!-- about end -->
       <!-- about end -->
       <div class="faq-area pos-rel black-bg">
-         <div class="faq-bg" data-background="assets/img/bg/faq-1.jpg"
-            style="background-image: url('assets/img/bg/faq-1.jpg');"></div>
+         <div class="faq-bg" data-background="assets/img/bg/thiet-ke-giao-dien.jpg"
+            style="background-image: url('assets/img/bg/thiet-ke-giao-dien.jpg');"></div>
          <div class="container">
             <div class="row">
                <div class="col-xl-6 offset-xl-6 col-lg-6 offset-lg-6">
@@ -358,7 +383,7 @@
                               data-bs-parent="#accordionExample">
                               <div class="accordion-body">
                                  <p>Chúng tôi bắt đầu bằng việc lắng nghe, phân tích lĩnh vực hoạt động, đối tượng khách
-                                    hàng và mục tiêu kinh doanh của bạn. Từ đó, đội ngũ EPAL Solution đề xuất giải pháp
+                                    hàng và mục tiêu kinh doanh của bạn. Từ đó, đội ngũ NBN SOFT đề xuất giải pháp
                                     phù hợp nhất về cấu trúc, chức năng và phong cách website.</p>
                               </div>
                            </div>
@@ -453,7 +478,7 @@
             <div class="row">
                <div class="col-lg-4 col-md-6 mb-30">
                   <div class="tportfolio">
-                     <div class="tportfolio__img"><img src="assets/img/portfolio/p1.jpg" alt="Dự án 1" /></div>
+                     <div class="tportfolio__img"><img src="assets/img/portfolio/sector-3.png" alt="Dự án 1" /></div>
                      <div class="tportfolio__text">
                         <h3 class="tportfolio-title">Website doanh nghiệp</h3>
                         <h4>Thiết kế & SEO</h4>
@@ -462,7 +487,7 @@
                </div>
                <div class="col-lg-4 col-md-6 mb-30">
                   <div class="tportfolio">
-                     <div class="tportfolio__img"><img src="assets/img/portfolio/p2.jpg" alt="Dự án 2" /></div>
+                     <div class="tportfolio__img"><img src="assets/img/portfolio/sector-2.png" alt="Dự án 2" /></div>
                      <div class="tportfolio__text">
                         <h3 class="tportfolio-title">Shop bán hàng</h3>
                         <h4>Thương mại điện tử</h4>
@@ -471,7 +496,7 @@
                </div>
                <div class="col-lg-4 col-md-6 mb-30">
                   <div class="tportfolio">
-                     <div class="tportfolio__img"><img src="assets/img/portfolio/p3.jpg" alt="Dự án 3" /></div>
+                     <div class="tportfolio__img"><img src="assets/img/portfolio/sector-8.png" alt="Dự án 3" /></div>
                      <div class="tportfolio__text">
                         <h3 class="tportfolio-title">Landing sản phẩm</h3>
                         <h4>Tối ưu chuyển đổi</h4>
@@ -499,12 +524,12 @@
                <div class="col-lg-6">
                   <h3>Liên hệ tư vấn</h3>
                   <p>Vui lòng điền thông tin, chúng tôi sẽ liên hệ trong vòng 24 giờ.</p>
-                  <form id="contact-form" action="#">
-                     <div class="mb-3"><input type="text" class="form-control" placeholder="Họ và tên" required></div>
-                     <div class="mb-3"><input type="tel" class="form-control" placeholder="Số điện thoại" required>
+                  <form id="contactForm">
+                     <div class="mb-3"><input type="text" name="name" class="form-control" placeholder="Họ và tên" required></div>
+                     <div class="mb-3"><input type="tel" name="phone" class="form-control" placeholder="Số điện thoại" required>
                      </div>
-                     <div class="mb-3"><input type="email" class="form-control" placeholder="Email" required></div>
-                     <div class="mb-3"><textarea class="form-control" rows="4"
+                     <div class="mb-3"><input type="email" name="email" class="form-control" placeholder="Email" required></div>
+                     <div class="mb-3"><textarea class="form-control" name="message" rows="4"
                            placeholder="Nội dung (mô tả yêu cầu)"></textarea></div>
                      <button type="submit" class="tp-btn">Gửi yêu cầu</button>
                   </form>
@@ -590,6 +615,28 @@
    </div>
    <!-- back to top end -->
 
+   <!-- ================= ZALO CHAT WIDGET ================= -->
+   <!-- Thay data-oaid = "YOUR_OAID" -->
+   <!-- <script src="https://sp.zalo.me/plugins/sdk.js"></script>
+   <div class="zalo-chat-widget" data-oaid="YOUR_OAID" data-welcome-msg="Chào bạn! Mình có thể giúp gì?"
+      data-autopopup="0" data-width="350" data-height="420">
+   </div> -->
+
+   <!-- Customer Chat plugin -->
+   <div class="fb-customerchat" attribution="setup_tool" page_id="YOUR_PAGE_ID" theme_color="#0084ff"
+      logged_in_greeting="Xin chào! Bạn cần hỗ trợ gì?" logged_out_greeting="Xin chào! Hãy nhắn tin cho chúng tôi.">
+   </div>
+
+   <!-- ============== NÚT NỔI (tùy chọn) ============== -->
+   <div class="chat-floating" aria-hidden="false">
+      <!-- Zalo open link (fallback nếu widget ko hiện) -->
+      <div style="display:flex;align-items:center;">
+         <a class="chat-btn zalo-icon" title="Chat Zalo" href="https://zalo.me/0366388171" target="_blank"
+            rel="noopener noreferrer"> <img src="https://epal.vn/wp-content/themes/Epal/images/zalo-app.svg"
+               alt="zalologo"></a>
+      </div>
+   </div>
+
 
    <!-- JS here -->
    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
@@ -608,6 +655,25 @@
    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
    <script src="assets/js/wavify.js"></script>
    <script src="assets/js/main.js"></script>
+
+
+   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+   <script>
+      (function () {
+         emailjs.init("lLC8hhIio4W1HxU2S"); // Thay bằng public key từ EmailJS
+      })();
+
+      document.getElementById("contactForm").addEventListener("submit", function (e) {
+         e.preventDefault();
+
+         emailjs.sendForm("service_1u9vh9k", "template_ml91vqm", this)
+            .then(function () {
+               alert("Gửi thành công! Chúng tôi sẽ liên hệ trong 24 giờ.");
+            }, function (error) {
+               alert("Lỗi gửi mail: " + JSON.stringify(error));
+            });
+      });
+   </script>
 </body>
 
 </html>
